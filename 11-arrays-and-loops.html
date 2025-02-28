@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Arrays and loops</title>
+  </head>
+  <body>
+    <script>
+     const myArray = [10, 20, 30];
+     console.log(myArray);
+
+    console.log(myArray[0]); /* number in [] represents position of value in the   
+     array, so if we console.log 0, we will receive 10 and so on. */ 
+
+     myArray[0] = 99;
+     console.log(myArray); /* if we want to change the value, we will
+     wright the position inside [] and give it definition of a new value.
+     after it, if we console the array log, we will receive changed value with
+     the other ones. */  
+
+     /* SYNTHAX SULES FOR THE ARRAYS -- 
+     if we want to create array, we use -> [] brackets and put a list of
+     values inside, separated each value with coma. we can also wright array
+     in multiple lines. 
+     to get a value inside the array, we use square brackets --> [],
+     and a number inside, like 1 - this number is called INDEX and represents the position in the array. 
+     inside the array we can put any tyoe of value. Array itself is also a value, which means that we can save arrays in variables 
+     or even save it in array. an array is an object but special type  of it */   
+
+  
+
+    [1, 'hello', true, {name: 'socks'},[1, 2]]  
+
+    console.log(typeof [1, 2]);
+
+    console.log(Array.isArray([1, 2])); /* if we want to check if something is an array or not,
+    we can use this code above. arrays has properties and functions to use.  */
+
+    console.log(myArray.length);   
+    /* the function, which is mentioned as --> .length,
+    tells us how many objects are inside the array. so we receive 3 in this situation,
+    because if we see above, we can count that there is 3 objects inside the array.
+    
+    next is --> .push() and it adds a value to the end of the array. 
+
+    .splice() --> removes a value from an array. the first number we give to it is 
+    index number, and the second is the quantity of the values we want to remove. */
+
+      
+
+    console.log(myArray.push(100));
+
+    myArray.splice(0, 1);
+
+    console.log(myArray); 
+
+
+
+
+    /* another feature of JS is loops- it lets us run some code 
+    over and over.  */  
+
+    let i = 1; /* first, we create variable <-- and then we create loop. */  
+
+    while (i <= 5) {     /* while the () is true, loop will continue to go unless it is false. 
+                          the code inside () is called loop condition, and inside {} is called loop body.
+                          variable i from the top is called loop variable. everytime we loop, we increase loop variable by 1, this is called INCREMENT STEP.
+                          replaying the loop is called iteration, and we did iteration 5 times in this code. loops create scope, which means that,
+                          everythng we create inside {} will stay inside it.*/ 
+      console.log(i);
+      i = i + 1;  /* <-- this is increment step, and without is loop will continue forever, which is called  infinite loop.*/ 
+    }
+
+      /* in JS tgere are 2 types of loops:
+      1. WHILE LOOP
+      2. FOR LOOP 
+      */  
+
+      for (let i = 1; i <= 5; i++ ) {
+        console.log(i);
+      }  /* this code does exactly same like above, its just shorter version of it.
+           if we use standart loops, it is recomnded to use FOR - loop, which contains 3 types of element in it,
+           if we need non-standart loops, we use while loops. non standart example is below...*/  
+
+      let randomNumber = 0;
+
+      while (randomNumber < 0.5) {
+        randomNumber = Math.random();
+      }
+
+      console.log(randomNumber);
+
+      /* technique - LOOPING THROUGH AN ARRAY --> 
+      1. go through each value of an array one by one
+      2. do something with each value 
+      */ 
+
+      const todoList = [
+        'make dinner',
+        'wash dishes',
+        'watch youtube' 
+      ] ;
+
+      for (let index= 0; index <= todoList.length - 1; index ++ ) {
+        const value = todoList[index];
+        console.log(value);
+      }
+
+
+    </script>
+  </body>
+</html>
